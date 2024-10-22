@@ -39,3 +39,6 @@ public class GlobalExceptionHandler {
 
     }
 }
+
+//Create a product micro service
+//do the same for product ->id, name, stockAmount, unitPrice, descrption
