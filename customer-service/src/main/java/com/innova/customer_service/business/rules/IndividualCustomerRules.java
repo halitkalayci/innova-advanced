@@ -2,6 +2,7 @@ package com.innova.customer_service.business.rules;
 
 import com.innova.customer_service.entities.IndividualCustomer;
 import com.innova.customer_service.repositories.abstracts.IndividualCustomerRepository;
+import com.innova.customer_service.utils.exceptions.types.BusinessException;
 import lombok.AllArgsConstructor;
 import org.apache.kafka.common.protocol.types.Field;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,7 @@ public class IndividualCustomerRules {
     public void  customerFirstNameCanNotBeDuplicated(String firstName){
         Optional<IndividualCustomer> result =  individualCustomerRepository.findByFirstNameIgnoreCase(firstName);
         if (result.isPresent()){
-            throw new RuntimeException("fgdfgd");
+            throw new BusinessException("Customer's first name can not be duplicated.");
         }
     }
 }
