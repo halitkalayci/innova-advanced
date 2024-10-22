@@ -5,17 +5,13 @@ spring:
     url: jdbc:postgresql://localhost:5432/innovacustomerservicedb
     username: postgres
     password: 12345
-    jpa:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
       hibernate:
-        ddl-auto: update
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.PostgreSQLDialect
-        javax:
-          persistence:
-            validation:
-              mode: none
-      show-sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
 eureka:
   client:
     register-with-eureka: true
