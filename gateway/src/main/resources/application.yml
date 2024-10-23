@@ -13,6 +13,16 @@ spring:
             uri: lb://customer-service
             predicates:
               - Path=/api/v1/individualcustomers/**
+          - id: eureka-routing
+            uri: http://localhost:9000
+            predicates:
+              - Path=/eureka/web
+            filters:
+              - SetPath=/
+          - id: eureka-static-routing
+            uri: http://localhost:9000
+            predicates:
+              - Path=/eureka/**
 eureka:
   client:
     register-with-eureka: true
@@ -24,3 +34,5 @@ eureka:
     preferIpAddress: true
 server:
   port: 8080
+
+# 10:35

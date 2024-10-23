@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/orders")
 public class OrdersController {
   @GetMapping
-  public String get() {
+  public String get() throws Exception {
+    System.out.println("İstek geldi, işleniyor..");
+    Thread.sleep(3000);
     return "Order service working..";
   }
 }
