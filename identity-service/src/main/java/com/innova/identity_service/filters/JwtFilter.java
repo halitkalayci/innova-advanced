@@ -1,5 +1,6 @@
 package com.innova.identity_service.filters;
 
+import com.innova.identity_service.entities.Role;
 import com.innova.identity_service.services.jwt.JwtService;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;
@@ -8,12 +9,15 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
+import java.util.List;
 
 // Middleware
 @Component
@@ -39,8 +43,15 @@ public class JwtFilter extends OncePerRequestFilter {
           // Spring Security ile JWT'nin birleşeceği nokta..
           Claims claims = jwtService.getClaims(jwt);
 
+          List<String> roles = claims.get("roles", List.class);
+
+          List<SimpleGrantedAuthority> authorities = roles
+                  .stream()
+                  .map(role -> new SimpleGrantedAuthority(role.toLowerCase()))
+                  .toList();
+
           UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(
-                  claims.getSubject(), null, null
+                  claims.getSubject(), null, authorities
           );
           token.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
           SecurityContextHolder.getContext().setAuthentication(token); // Spring Security girişi..

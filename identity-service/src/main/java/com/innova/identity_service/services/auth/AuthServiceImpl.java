@@ -12,6 +12,10 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
 @Service
 @RequiredArgsConstructor
 public class AuthServiceImpl implements AuthService{
@@ -32,7 +36,10 @@ public class AuthServiceImpl implements AuthService{
     // TODO: Giriş yapmış... JWT üretip geriye dönmem lazım..
     User user = userService.findByEmail(loginRequest.getEmail());
 
-    return jwtService.generateToken(user.getEmail(), user.getId());
+    Map<String, Object> extraClaims = new HashMap<>();
+    extraClaims.put("roles", user.getRoles().stream().map(role -> role.getName()).toList());
+
+    return jwtService.generateToken(user.getEmail(), extraClaims);
   }
 
   @Override
@@ -43,7 +50,10 @@ public class AuthServiceImpl implements AuthService{
     // TODO: kullanıcıyı bul, ona özel token üret
     User user = userService.findByEmail(registerRequest.getEmail());
 
-    return jwtService.generateToken(user.getEmail(), user.getId());
+    Map<String, Object> extraClaims = new HashMap<>();
+    extraClaims.put("roles", user.getRoles().stream().map(role -> role.getName()).toList());
+
+    return jwtService.generateToken(user.getEmail(), extraClaims);
   }
 
   @Override

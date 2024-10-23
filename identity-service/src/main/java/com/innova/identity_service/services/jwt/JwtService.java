@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import javax.crypto.SecretKey;
 import java.security.Key;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 
@@ -20,14 +22,19 @@ public class JwtService
   private String SECRET_KEY;
   @Value("${jwt.expiration}")
   private Long EXPIRATION;
-  public String generateToken(String username, UUID id)
+
+  public String generateToken(String username)
+  {
+    return generateToken(username, null);
+  }
+  public String generateToken(String username, Map<String,Object> extraClaims)
   {
     return Jwts
             .builder()
             .subject(username)
             .issuedAt(new Date(System.currentTimeMillis()))
             .expiration(new Date(System.currentTimeMillis() + EXPIRATION))
-            .claim("id", id)
+            .claims(extraClaims)
             .signWith(getSigninKey())
             .compact();
   }

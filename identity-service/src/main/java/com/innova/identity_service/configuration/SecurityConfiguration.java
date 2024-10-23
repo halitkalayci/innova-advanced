@@ -5,6 +5,7 @@ import com.innova.identity_service.services.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -31,7 +32,8 @@ public class SecurityConfiguration {
             .httpBasic(AbstractHttpConfigurer::disable)
             .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
             .authorizeHttpRequests(req -> req
-                    .requestMatchers("/api/v1/auth/validate").authenticated()
+                    .requestMatchers("/api/v1/auth/validate").hasAnyAuthority("admin","moderator")
+                    //.requestMatchers(HttpMethod.GET,"/api/v1/auth/**").permitAll()
                     .anyRequest().permitAll());
 
     return httpSecurity.build();
