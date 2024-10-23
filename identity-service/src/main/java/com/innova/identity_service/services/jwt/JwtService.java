@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.security.Key;
 import java.util.Date;
+import java.util.UUID;
 
 
 @Service
@@ -17,14 +18,14 @@ public class JwtService
   private String SECRET_KEY;
   @Value("${jwt.expiration}")
   private Long EXPIRATION;
-  public String generateToken()
+  public String generateToken(String username, UUID id)
   {
     return Jwts
             .builder()
-            .subject("username")
+            .subject(username)
             .issuedAt(new Date(System.currentTimeMillis()))
             .expiration(new Date(System.currentTimeMillis() + EXPIRATION))
-            .claim("customalan","customdeğer")
+            .claim("id", id)
             .signWith(getSigninKey())
             .compact();
   }

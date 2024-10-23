@@ -1,5 +1,6 @@
 package com.innova.identity_service.api.controllers;
 
+import com.innova.identity_service.dtos.auth.LoginRequest;
 import com.innova.identity_service.dtos.auth.RegisterRequest;
 import com.innova.identity_service.services.auth.AuthService;
 import lombok.RequiredArgsConstructor;
@@ -20,4 +21,12 @@ public class AuthController {
   {
     return authService.register(registerRequest);
   }
+
+  @PostMapping("login")
+  public String login(@RequestBody LoginRequest loginRequest)
+  {
+    return authService.login(loginRequest);
+  }
+
+
 }
