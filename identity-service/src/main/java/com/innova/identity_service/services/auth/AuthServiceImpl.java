@@ -2,6 +2,7 @@ package com.innova.identity_service.services.auth;
 
 import com.innova.identity_service.dtos.auth.LoginRequest;
 import com.innova.identity_service.dtos.auth.RegisterRequest;
+import com.innova.identity_service.services.jwt.JwtService;
 import com.innova.identity_service.services.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Service;
 public class AuthServiceImpl implements AuthService{
   //private final AuthenticationManager authenticationManager;
   private final UserService userService;
+  private final JwtService jwtService;
 
   @Override
   public String login(LoginRequest loginRequest) {
@@ -35,6 +37,7 @@ public class AuthServiceImpl implements AuthService{
     //
     userService.saveUser(registerRequest);
 
-    return null;
+    // TODO: kullanıcıyı bul, ona özel token üret
+    return jwtService.generateToken();
   }
 }
