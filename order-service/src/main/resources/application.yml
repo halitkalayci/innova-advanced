@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/innovaorderservicedb
     username: postgres
-    password: 12345
+    password: test
     jpa:
       hibernate:
         ddl-auto: update
@@ -21,6 +21,7 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:9000/eureka
+    fetch-registry: true
   instance:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
