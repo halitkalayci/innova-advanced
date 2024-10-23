@@ -45,4 +45,10 @@ public class AuthServiceImpl implements AuthService{
 
     return jwtService.generateToken(user.getEmail(), user.getId());
   }
+
+  @Override
+  public Boolean validate(String token)
+  {
+    return jwtService.validateToken(token);
+  }
 }

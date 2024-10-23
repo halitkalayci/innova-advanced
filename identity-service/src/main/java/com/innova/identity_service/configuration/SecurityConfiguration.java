@@ -1,5 +1,6 @@
 package com.innova.identity_service.configuration;
 
+import com.innova.identity_service.filters.JwtFilter;
 import com.innova.identity_service.services.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -13,6 +14,7 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @RequiredArgsConstructor
@@ -20,13 +22,17 @@ public class SecurityConfiguration {
 
   private final UserService userService;
   private final PasswordEncoder passwordEncoder;
+  private final JwtFilter jwtFilter;
   // TODO: Tekrar
   @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
     httpSecurity
             .csrf(AbstractHttpConfigurer::disable)
             .httpBasic(AbstractHttpConfigurer::disable)
-            .authorizeHttpRequests(req -> req.anyRequest().permitAll());
+            .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
+            .authorizeHttpRequests(req -> req
+                    .requestMatchers("/api/v1/auth/validate").authenticated()
+                    .anyRequest().permitAll());
 
     return httpSecurity.build();
   }
