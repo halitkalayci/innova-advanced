@@ -12,7 +12,6 @@ spring:
           - id: customer-service-routing
             uri: lb://customer-service
             predicates:
-              - Path=/api/v1/customers/**
               - Path=/api/v1/individualcustomers/**
 eureka:
   client:
