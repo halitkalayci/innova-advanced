@@ -1,0 +1,49 @@
+@options
+@packages
+@argfile
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'C:/Users/klyyc/Desktop/Projects/Java/innova-advanced/innova-core/src/main/java;C:/Users/klyyc/Desktop/Projects/Java/innova-advanced/innova-core/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/klyyc/Desktop/Projects/Java/innova-advanced/innova-core/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'innova-core 1.0.0 API'
+-use
+-version
+-windowtitle
+'innova-core 1.0.0 API'
+io.github.halitkalayci
+'C:/Users/klyyc/Desktop/Projects/Java/innova-advanced/innova-core/src/main/java/io/github/halitkalayci/ExampleService.java'
+'C:/Users/klyyc/Desktop/Projects/Java/innova-advanced/innova-core/src/main/java/io/github/halitkalayci/Main.java'
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\src\main\java = 1729753918262
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\generated-sources\annotations = 1729754404685
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\allclasses-index.html = 1729754717949
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\allpackages-index.html = 1729754717954
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\copy.svg = 1729754717987
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\element-list = 1729754717896
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\help-doc.html = 1729754717981
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\index-all.html = 1729754717966
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\index.html = 1729754717971
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\jquery-ui.overrides.css = 1729754718004
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\member-search-index.js = 1729754717958
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\module-search-index.js = 1729754717955
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\overview-tree.html = 1729754717939
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\package-search-index.js = 1729754717956
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\script.js = 1729754717986
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\search-page.js = 1729754717993
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\search.html = 1729754717969
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\search.js = 1729754717990
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\stylesheet.css = 1729754717984
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\tag-search-index.js = 1729754717959
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\type-search-index.js = 1729754717958
