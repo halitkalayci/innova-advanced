@@ -1,3 +1,4 @@
 io\github\halitkalayci\ExampleService.class
-io\github\halitkalayci\jwt\BaseJwtService.class
+io\github\halitkalayci\annotations\EnableCore.class
 io\github\halitkalayci\Main.class
+io\github\halitkalayci\jwt\BaseJwtService.class

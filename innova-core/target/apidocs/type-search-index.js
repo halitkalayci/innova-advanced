@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"io.github.halitkalayci.jwt","l":"BaseJwtService"},{"p":"io.github.halitkalayci","l":"ExampleService"},{"p":"io.github.halitkalayci","l":"Main"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"io.github.halitkalayci.jwt","l":"BaseJwtService"},{"p":"io.github.halitkalayci.annotations","l":"EnableCore"},{"p":"io.github.halitkalayci","l":"ExampleService"},{"p":"io.github.halitkalayci","l":"Main"}];updateSearchResults();

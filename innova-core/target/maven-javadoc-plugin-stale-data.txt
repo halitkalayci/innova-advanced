@@ -20,13 +20,15 @@
 -docencoding
 'UTF-8'
 -doctitle
-'innova-core 1.0.2 API'
+'innova-core 1.0.3 API'
 -use
 -version
 -windowtitle
-'innova-core 1.0.2 API'
+'innova-core 1.0.3 API'
+io.github.halitkalayci.annotations
 io.github.halitkalayci
 io.github.halitkalayci.jwt
+'C:/Users/klyyc/Desktop/Projects/Java/innova-advanced/innova-core/src/main/java/io/github/halitkalayci/annotations/EnableCore.java'
 'C:/Users/klyyc/Desktop/Projects/Java/innova-advanced/innova-core/src/main/java/io/github/halitkalayci/ExampleService.java'
 'C:/Users/klyyc/Desktop/Projects/Java/innova-advanced/innova-core/src/main/java/io/github/halitkalayci/jwt/BaseJwtService.java'
 'C:/Users/klyyc/Desktop/Projects/Java/innova-advanced/innova-core/src/main/java/io/github/halitkalayci/Main.java'
@@ -68,24 +70,24 @@ C:\Users\klyyc\.m2\repository\org\springframework\spring-aop\6.1.13\spring-aop-6
 C:\Users\klyyc\.m2\repository\org\springframework\spring-context\6.1.13\spring-context-6.1.13.jar = 1727943444430
 C:\Users\klyyc\.m2\repository\org\springframework\spring-expression\6.1.13\spring-expression-6.1.13.jar = 1727943444639
 C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\src\main\java = 1729753918262
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\generated-sources\annotations = 1729757010722
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\allclasses-index.html = 1729757015055
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\allpackages-index.html = 1729757015058
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\copy.svg = 1729757015087
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\element-list = 1729757014984
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\help-doc.html = 1729757015082
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\index-all.html = 1729757015073
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\index.html = 1729757015045
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\jquery-ui.overrides.css = 1729757015105
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\member-search-index.js = 1729757015062
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\module-search-index.js = 1729757015059
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\overview-summary.html = 1729757015077
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\overview-tree.html = 1729757015041
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\package-search-index.js = 1729757015060
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\script.js = 1729757015086
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\search-page.js = 1729757015093
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\search.html = 1729757015075
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\search.js = 1729757015090
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\stylesheet.css = 1729757015085
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\tag-search-index.js = 1729757015063
-C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\type-search-index.js = 1729757015061
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\generated-sources\annotations = 1729758523991
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\allclasses-index.html = 1729758533367
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\allpackages-index.html = 1729758533370
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\copy.svg = 1729758533447
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\element-list = 1729758533278
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\help-doc.html = 1729758533395
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\index-all.html = 1729758533387
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\index.html = 1729758533354
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\jquery-ui.overrides.css = 1729758533576
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\member-search-index.js = 1729758533374
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\module-search-index.js = 1729758533371
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\overview-summary.html = 1729758533391
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\overview-tree.html = 1729758533350
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\package-search-index.js = 1729758533372
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\script.js = 1729758533440
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\search-page.js = 1729758533450
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\search.html = 1729758533389
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\search.js = 1729758533449
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\stylesheet.css = 1729758533404
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\tag-search-index.js = 1729758533375
+C:\Users\klyyc\Desktop\Projects\Java\innova-advanced\innova-core\target\apidocs\type-search-index.js = 1729758533373
