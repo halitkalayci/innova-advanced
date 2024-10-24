@@ -10,3 +10,8 @@ eureka:
   instance: localhost
 server:
   port: 9000
+
+# kafka
+# k8s
+# config server
+# 3.55

@@ -1,0 +1,35 @@
+services:
+  postgres:
+    image: postgres
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_PASSWORD=test
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - common
+  discover-server:
+    #image: innova-discover-server
+    build: ./discover-server
+    ports:
+      - "9000:9000"
+    networks:
+      - common
+  identity-service:
+    build: ./identity-service
+    ports:
+      - "53959:53959"
+    networks:
+      - common
+    environment:
+      - SPRING_DATASOURCE_URL= jdbc:postgresql://postgres:5432/innovaidentityservicedb
+    depends_on:
+      - postgres
+volumes:
+  db-data:
+    name: db-data
+
+networks:
+  common:
+    driver: bridge
