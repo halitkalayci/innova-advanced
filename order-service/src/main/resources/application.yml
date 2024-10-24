@@ -27,3 +27,6 @@ eureka:
     preferIpAddress: true
 server:
   port: 0
+jwt:
+  expiration: 600000
+  secret: "2bKHUKXgPP9rQZk2mk7r5OLAd3XKVC/zEUvji/Z3T8xtS1TmeH1hrzKM5Mm3FwQ0EZOa1x3UgMKEj8Ih95yo/nhb0FsCcoFEEqbNUoKeF5QUkP8fcv4tEpAbLCG2KhiLLUzCk1Uk3cG/owIy8dLk1+jtqgOtH28XUffdoiw07zhp0uGZqycmEa6wQUq3/TJK"
