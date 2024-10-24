@@ -5,6 +5,7 @@ import com.innova.identity_service.dtos.auth.RegisterRequest;
 import com.innova.identity_service.entities.User;
 import com.innova.identity_service.services.jwt.JwtService;
 import com.innova.identity_service.services.user.UserService;
+import io.github.halitkalayci.jwt.BaseJwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -21,7 +22,7 @@ import java.util.Objects;
 public class AuthServiceImpl implements AuthService{
   private final AuthenticationManager authenticationManager;
   private final UserService userService;
-  private final JwtService jwtService;
+  private final BaseJwtService jwtService;
 
   @Override
   public String login(LoginRequest loginRequest) {

@@ -7,6 +7,8 @@
     <file url="file://$PROJECT_DIR$/gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/identity-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/identity-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/innova-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/innova-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-service/src/main/java" charset="UTF-8" />
   </component>
 </project>
