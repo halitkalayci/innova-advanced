@@ -10,22 +10,29 @@ services:
     networks:
       - common
   discover-server:
-    #image: innova-discover-server
+    image: innova-discover-server
     build: ./discover-server
     ports:
       - "9000:9000"
     networks:
       - common
   order-service:
-    image: innova-order-service
+    image: innova-order-service2
     build: ./order-service
     ports:
       - "8085:8085"
+    depends_on: # container'ın başlaması != springin başlaması
+      - config-server
     environment:
       - SPRING_CLOUD_CONFIG_PROFILE=docker
       - CONFIGURL=http://config-server:8001
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8001/actuator/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
   config-server:
-    image: innova-config-server
+    image: innova-config-server2
     build: ./config-server
     ports:
       -  "8001:8001"

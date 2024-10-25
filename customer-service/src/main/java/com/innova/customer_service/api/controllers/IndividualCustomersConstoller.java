@@ -26,4 +26,5 @@ public class IndividualCustomersConstoller {
     public List<GetAllIndividualCustomerResponse> getAll(){
         return individualCustomerService.getAll();
     }
+
 }

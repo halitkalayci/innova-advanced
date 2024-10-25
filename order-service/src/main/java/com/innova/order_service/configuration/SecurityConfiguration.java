@@ -17,7 +17,7 @@ public class SecurityConfiguration {
   {
     baseSecurityService.configureCommonSecurityRules(httpSecurity);
 
-    httpSecurity.authorizeHttpRequests(req -> req.anyRequest().authenticated());
+    httpSecurity.authorizeHttpRequests(req -> req.anyRequest().permitAll());
 
     return httpSecurity.build();
   }

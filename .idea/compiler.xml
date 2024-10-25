@@ -8,11 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
-        <module name="order-service" />
+        <module name="common" />
         <module name="customer-service" />
+        <module name="discover-server" />
+        <module name="order-service" />
         <module name="identity-service" />
         <module name="gateway" />
-        <module name="discover-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
