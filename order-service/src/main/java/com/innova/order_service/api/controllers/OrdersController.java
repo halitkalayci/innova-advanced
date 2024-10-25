@@ -2,6 +2,7 @@ package com.innova.order_service.api.controllers;
 
 import com.innova.order_service.clients.CustomerServiceClient;
 import io.github.halitkalayci.dtos.customer.responses.GetAllIndividualCustomerResponse;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
