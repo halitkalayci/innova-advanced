@@ -1,32 +1,12 @@
 spring:
   application:
     name: order-service
-  datasource:
-    url: jdbc:postgresql://localhost:5432/innovaorderservicedb
-    username: postgres
-    password: test
-    jpa:
-      hibernate:
-        ddl-auto: update
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.PostgreSQLDialect
-        javax:
-          persistence:
-            validation:
-              mode: none
-      show-sql: true
-eureka:
-  client:
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:9000/eureka
-    fetch-registry: true
-  instance:
-    instance-id: ${spring.application.name}:${instanceId:${random.value}}
-    preferIpAddress: true
+  cloud:
+    config:
+      uri: ${configurl}
+      profile: dev
+  config:
+    import: configserver:${configurl}
 server:
-  port: 0
-jwt:
-  expiration: 600000
-  secret: "2bKHUKXgPP9rQZk2mk7r5OLAd3XKVC/zEUvji/Z3T8xtS1TmeH1hrzKM5Mm3FwQ0EZOa1x3UgMKEj8Ih95yo/nhb0FsCcoFEEqbNUoKeF5QUkP8fcv4tEpAbLCG2KhiLLUzCk1Uk3cG/owIy8dLk1+jtqgOtH28XUffdoiw07zhp0uGZqycmEa6wQUq3/TJK"
+  port: 8085
+configurl: http://localhost:8001

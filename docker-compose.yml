@@ -16,16 +16,19 @@ services:
       - "9000:9000"
     networks:
       - common
-  identity-service:
-    build: ./identity-service
+  order-service:
+    image: innova-order-service
+    build: ./order-service
     ports:
-      - "53959:53959"
-    networks:
-      - common
+      - "8085:8085"
     environment:
-      - SPRING_DATASOURCE_URL= jdbc:postgresql://postgres:5432/innovaidentityservicedb
-    depends_on:
-      - postgres
+      - SPRING_CLOUD_CONFIG_PROFILE=docker
+      - CONFIGURL=http://config-server:8001
+  config-server:
+    image: innova-config-server
+    build: ./config-server
+    ports:
+      -  "8001:8001"
 volumes:
   db-data:
     name: db-data
